@@ -73,7 +73,7 @@ Once the BNN setup is found, it's easy to brute force the position of all other 
 
 ## Files
 
-- problem_2.py. Solution to the second problem.
+- problem_2.py. Solution to the second problem (Python 3.10).
 - display_board.py. Simple function for board visualization.
 
 ## Results
