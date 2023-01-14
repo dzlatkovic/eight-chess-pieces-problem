@@ -2,7 +2,7 @@
 
 ## Background
 
-The problem of maximizing the number of squares on a chess board that can be attacked by the eight main pieces was first posed in 1849, but it wasn't until 1989 that it was finally solved by [Skiena and co-workers]((https://academic.oup.com/comjnl/article/32/6/567/341699)). The original problem can be summarized as follows:
+The problem of maximizing the number of squares on a chess board that can be attacked by the eight main pieces was first posed in 1849, but it wasn't until 1989 that it was finally solved by [Skiena and co-workers](https://academic.oup.com/comjnl/article/32/6/567/341699). The original problem can be summarized as follows:
 
 ### The Original Problem:
 
