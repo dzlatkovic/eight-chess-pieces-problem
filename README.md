@@ -21,7 +21,7 @@ In the original problem, the pieces themselves **must be under attack** in order
 
 Lets take a look at the following position:
 
-<img src="board.png" alt="board" style="zoom:50%;" />
+<img src="board.png" alt="board" style="zoom: 33%;" />
 
 The problem's requirement is met since none of the pieces are under attack. So the total score for this position is:
 
@@ -71,11 +71,16 @@ The program searches for all possible setups of Q, B, and B with a score of 49. 
 
 Once the BNN setup is found, it's easy to brute force the position of all other pieces and look for the setup giving 100+ points.
 
+## Files
+
+- problem_2.py. Solution to the second problem.
+- display_board.py. Simple function for board visualization.
+
 ## Results
 
 It is not possible to obtain a position with 100+ points. The program found 167 unique positions with the score of 99 and 0 positions with the score 100+.
 
 ## To-Do List:
 
-- Add solution for Problem number 1.
-- Documentation and refactoring for Problem number 2.
+- Add solution for variation number 1.
+- Documentation and refactoring for variation number 2.
