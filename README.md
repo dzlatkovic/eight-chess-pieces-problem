@@ -21,7 +21,7 @@ In the original problem, the pieces themselves **must be under attack** in order
 
 Lets take a look at the following position:
 
-<img src="board.png" alt="board" style="zoom: 33%;" />
+<img src="board.png" alt="board"  />
 
 The problem's requirement is met since none of the pieces are under attack. So the total score for this position is:
 
@@ -83,4 +83,36 @@ It is not possible to obtain a position with 100+ points. The program found 167 
 ## To-Do List:
 
 - Add solution for variation number 1.
+
+  Update: Monte-Carlo simulation showed that there are more than one solution for variation number 1. For example:
+
+  ```
+  T . . . . . . .
+  . T . . . . . .
+  . . . . . S . .
+  . . . . . . . .
+  . . . . . L . .
+  . . . . . S . L
+  . . D . . . . .
+  . . . . . . . K
+  
+  . . T . . . . .
+  . T . . . . . .
+  . . . . . . . .
+  . . . K . . . L
+  . . . . . L . S
+  . . . . . . . .
+  . . . . . S . .
+  D . . . . . . .
+  
+  . . T . . . . .
+  . T . . . . . .
+  . . . . . . . .
+  . . . K . . . .
+  . . . . . L . S
+  . . . . . . . .
+  . . . . L S . .
+  D . . . . . . .
+  ```
+
 - Documentation and refactoring for variation number 2.

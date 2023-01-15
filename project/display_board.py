@@ -31,4 +31,4 @@ if __name__ == "__main__":
     e.g. Qc2: Piece symbol, then file (column) and
     finally rank (row). 
     """
-    display_board("Bd4 Bd5 Kb4 Nd6 Nd7 Qc2 Re1 Rg3")
+    display_board("Dc2 Tb7 Ta8 Lf4 Lh3 Sf6 Sf3 Kh1")
