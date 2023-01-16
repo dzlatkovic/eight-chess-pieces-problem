@@ -87,32 +87,32 @@ It is not possible to obtain a position with 100+ points. The program found 167 
   Update: Monte-Carlo simulation showed that there are more than one solution for variation number 1. For example:
 
   ```
-  T . . . . . . .
-  . T . . . . . .
-  . . . . . S . .
+  R . . . . . . .
+  . R . . . . . .
+  . . . . . N . .
   . . . . . . . .
-  . . . . . L . .
-  . . . . . S . L
-  . . D . . . . .
+  . . . . . B . .
+  . . . . . N . B
+  . . Q . . . . .
   . . . . . . . K
   
-  . . T . . . . .
-  . T . . . . . .
+  . . R . . . . .
+  . R . . . . . .
   . . . . . . . .
-  . . . K . . . L
-  . . . . . L . S
+  . . . K . . . B
+  . . . . . B . N
   . . . . . . . .
-  . . . . . S . .
-  D . . . . . . .
+  . . . . . N . .
+  Q . . . . . . .
   
-  . . T . . . . .
-  . T . . . . . .
+  . . R . . . . .
+  . R . . . . . .
   . . . . . . . .
   . . . K . . . .
-  . . . . . L . S
+  . . . . . B . N
   . . . . . . . .
-  . . . . L S . .
-  D . . . . . . .
+  . . . . B N . .
+  Q . . . . . . .
   ```
 
 - Documentation and refactoring for variation number 2.
