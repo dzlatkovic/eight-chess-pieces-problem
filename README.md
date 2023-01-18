@@ -71,14 +71,14 @@ The program searches for all possible setups of Q, B, and B with a score of 49. 
 
 Once the BNN setup is found, it's easy to brute force the position of all other pieces and look for the setup giving 100+ points.
 
-## Files
-
-- problem_2.py. Solution to the second problem (Python 3.10).
-- display_board.py. Simple function for board visualization.
-
 ## Results
 
-It is not possible to obtain a position with 100+ points. The program found 167 unique positions with the score of 99 and 0 positions with the score 100+.
+It is not possible to obtain a position with 100+ points. `problem_2.py` found 167 unique positions with the score of 99 and 0 positions with the score 100+.
+
+## Files
+
+- `problem_2.py`. Solution to the second problem (Python 3.10).
+- `display_board.py`. Simple function for board visualization.
 
 ## To-Do List:
 
@@ -87,32 +87,15 @@ It is not possible to obtain a position with 100+ points. The program found 167 
   Update: Monte-Carlo simulation showed that there are more than one solution for variation number 1. For example:
 
   ```
-  R . . . . . . .
-  . R . . . . . .
-  . . . . . N . .
-  . . . . . . . .
-  . . . . . B . .
-  . . . . . N . B
-  . . Q . . . . .
-  . . . . . . . K
-  
-  . . R . . . . .
-  . R . . . . . .
-  . . . . . . . .
-  . . . K . . . B
-  . . . . . B . N
-  . . . . . . . .
-  . . . . . N . .
-  Q . . . . . . .
-  
-  . . R . . . . .
-  . R . . . . . .
-  . . . . . . . .
-  . . . K . . . .
-  . . . . . B . N
-  . . . . . . . .
-  . . . . B N . .
-  Q . . . . . . .
+  R . . . . . . .    . . R . . . . .    . . R . . . . .
+  . R . . . . . .    . R . . . . . .    . R . . . . . .
+  . . . . . N . .    . . . . . . . .    . . . . . . . .
+  . . . . . . . .    . . . K . . . B    . . . K . . . .
+  . . . . . B . .    . . . . . B . N    . . . . . B . N
+  . . . . . N . B    . . . . . . . .    . . . . . . . .
+  . . Q . . . . .    . . . . . N . .    . . . . B N . .
+  . . . . . . . K    Q . . . . . . .    Q . . . . . . .
   ```
-
+  
 - Documentation and refactoring for variation number 2.
+  Update 2023/01/18: `problem_2.py` was further optimized and now completes in less than one second.
