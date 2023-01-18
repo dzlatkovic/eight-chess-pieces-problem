@@ -81,6 +81,8 @@ for queen in [(2, 2), (3, 2), (4, 2), (3, 3), (4, 3), (4, 4)]:
 
     for first_bishop in remaining:
         pieces2, remaining1 = add_piece(first_bishop, bishop_attacks, pieces1, remaining)
+        if len(queen_attacks(queen)) + len(bishop_attacks(first_bishop)) < 36:
+            continue
 
         for second_bishop in remaining1:
             if (first_bishop[0] + first_bishop[1]) % 2 == (second_bishop[0] + second_bishop[1]) % 2:
@@ -104,19 +106,20 @@ for queen in [(2, 2), (3, 2), (4, 2), (3, 3), (4, 3), (4, 4)]:
                         pieces5, remaining4 = add_piece(second_rook, rook_attacks, pieces4, remaining3)
 
                     for first_knight in remaining4:
-                        if knight_attacks(first_knight).intersection(pieces5):
+                        if knight_attacks(first_knight).intersection(pieces5) or len(knight_attacks(first_knight)) < 7:
                             continue
                         else:
                             pieces6, remaining5 = add_piece(first_knight, knight_attacks, pieces5, remaining4)
 
                         for second_knight in remaining5:
-                            if knight_attacks(second_knight).intersection(pieces6):
+                            if (knight_attacks(second_knight).intersection(pieces6)
+                                    or len(knight_attacks(first_knight)) + len(knight_attacks(second_knight)) < 14):
                                 continue
                             else:
                                 pieces7, remaining6 = add_piece(second_knight, knight_attacks, pieces6, remaining5)
 
                             for king in remaining6:
-                                if king_attacks(king).intersection(pieces7):
+                                if king_attacks(king).intersection(pieces7) or len(king_attacks(king)) < 8:
                                     continue
                                 else:
                                     pieces8, remaining7 = add_piece(king, king_attacks, pieces7, remaining6)
@@ -126,7 +129,7 @@ for queen in [(2, 2), (3, 2), (4, 2), (3, 3), (4, 3), (4, 4)]:
                                          len(bishop_attacks(second_bishop)) + len(knight_attacks(first_knight)) +
                                          len(knight_attacks(second_knight)) + len(king_attacks(king)))
 
-                                if score == 99 and len(pieces8) == 8:
+                                if score == 99:
                                     positions_99.add(sort_coord(get_coord(queen, first_rook, second_rook, first_bishop,
                                                                           second_bishop, first_knight, second_knight,
                                                                           king)))
