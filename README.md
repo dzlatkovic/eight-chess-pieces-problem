@@ -67,7 +67,7 @@ To get a 100+ position, the rest of the figures must attack at least 51 squares.
 
 ## The program
 
-The program searches for all possible setups of Q, B, and B with a score of 49. Any positions leading to a lower score should not be further checked, as they can't possibly lead to a 100+ score. Due to the symmetry of the board, the Queen position should be chosen from the following set {b2, c2, d2, c3, d3, c4}. The queen can't be on the edge of the board as the maximum score for BNN would be 47.
+The program searches for all possible setups of Q, B, and B with a score of 49. Any positions leading to a lower score should not be further checked, as they can't possibly lead to a 100+ score. Due to the symmetry of the board, the Queen position should be chosen from the following set {b2, c2, d2, c3, d3, d4}. The queen can't be on the edge of the board as the maximum score for BNN would be 47.
 
 Once the BNN setup is found, it's easy to brute force the position of all other pieces and look for the setup giving 100+ points.
 
